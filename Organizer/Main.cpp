@@ -14,6 +14,10 @@ Electronic organizer:
 - Contacts : Contact { add, list, view (optional: remove) }
 */
 
+// Clone:
+// https://github.com/mrshpot/CppCamp2016.git
+
+
 struct Contact
 {
 	string name;
@@ -34,7 +38,6 @@ class Organizer
 {
 public:
 	size_t noteCount() const;
-
 	void addNote(const string &note);
 	void removeNote(size_t idx);
 	const string getNote(size_t idx) const;
