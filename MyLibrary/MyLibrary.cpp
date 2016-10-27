@@ -6,6 +6,7 @@ using namespace std;
 MyClass::MyClass()
 {
 	cout << "MyClass()" << endl;
+	this->name = "MyClass";
 }
 
 MyClass::~MyClass()
@@ -18,6 +19,11 @@ int MyClass::hello(int x)
 	int res = x * 2;
 	cout << "MyClass::hello(" << x << ") => " << res << endl;
 	return res;
+}
+
+const char* MyClass::getName()
+{
+	return this->name.c_str();
 }
 
 void mylib_hello(int number)
@@ -36,4 +42,8 @@ void mylib_MyClass_destroy(MyClass *object)
 int mylib_MyClass_hello(MyClass *object, int x)
 {
 	return object->hello(x);
+}
+const char* mylib_MyClass_getName(MyClass *object)
+{
+	return object->getName();
 }
