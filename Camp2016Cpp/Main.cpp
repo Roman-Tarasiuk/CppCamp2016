@@ -2,12 +2,10 @@
 #include <memory>
 
 #include <string>
-#include <vector> // analogous to List
+#include <vector>
+#include <map>
+#include <unordered_map>
 #include <algorithm>
-
-#include "Foo.h"
-#include "Quux.h"
-
 
 using namespace std;
 
@@ -15,8 +13,6 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
-	Foo foo;
-	foo.hello();
-	frobnicate(foo);
+
 	return 0;
 }
